@@ -10,20 +10,10 @@ detectip(ip_det_url);
 var v=0;
 function detectip(url)
 {
-	var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() 
-	{ 
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) 
-		{
-			    var ipJSON= JSON.parse(xmlHttp.responseText);
-			    ip = ipJSON.ip; 
-				latitude=ipJSON.latitude;
-				longitude=ipJSON.longitude;
+	latitude="1";
+				longitude="2";
 				init();
-        }
-    }
-    xmlHttp.open("GET", url, true);
-    xmlHttp.send(null);	
+	
 }
 function init()
 {
