@@ -1,35 +1,143 @@
 body {
-  font-family: 'VT323', monospace;
-  font-size: 1.5em;
-  background-color: black;
-  color: white;
+  margin: 0;
+  padding: 15px 20px;
+  min-height: 99%;
+  width: 100%;
+  min-width: 550px;
+  color: #05ce91;
+  background: #211D1B;
+  font-family: cursor, monospace;
+  overflow-x: hidden;
+}
+
+html, 
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#terminal {
+  color: yellowgreen;
+}
+
+::selection {
+  color: #211830;
+  background-color: #05ce91;
+}
+::-moz-selection {
+  color: #211830;
+  background-color: #05ce91;
 }
 textarea {
-  border: none;
-  border-color: transparent;
+  left: -1000px;
+  position: absolute;
 }
-input {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: green;
-  border: none;
-  width: 100%;
+b {
+  font-weight: bold;
+  text-decoration: underline;
 }
-.outcol
-{
-	color:#42f4e8;
+/* Cursor Start */
+.cursor {
+  font-size: 12px;
+  color: #73ABAD;
+  background-color: #73ABAD;
+  position: relative;
+  opacity: 1;
+  height: 1.5em;
+  width: 10px;
+  max-width: 10px;
+  transform: translateY(4px);
+  overflow: hidden;
+  text-indent: -5px;
+  display: inline-block;
+  text-decoration: blink;
+  animation: blinker 1s linear infinite;
 }
-.usr
-{
-	color:#c157d6;
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
-input:focus {
-  outline: none;
+#command {
+  cursor: text;
+  height: 50px;
+  color: #dcdcdc;
+}
+#liner {
+  line-height: 1.3em;
+  margin-top: -2px;
+  animation: show 0.5s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+#liner::before {
+  color: #05ce91;
+  content: "guest@satheshrgs.in:~$";
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Cursor End */
+p {
+  display: block;
+  line-height: 1.3em;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.05em;
+  animation: typing 0.5s steps(30, end);
+}
+.no-animation {
+  animation: typing 0 steps(30, end);
+}
+.margin {
+  margin-left: 20px;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.index {
+  color: #DCDCCC;
+}
+.color2 {
+  color: #dcdccc;
+}
+.command {
+  color: #ff9d00;
+  text-shadow: 0 0 5px #ff9d00; 
+}
+.error {
+  color: #B89076;
+}
+.white {
+  color: #fff;
+}
+.inherit,
+a {
+  color: #9C8394;
 }
 a {
-    color: #42f4e8;
-    text-decoration: underline;
+  text-decoration: inherit;
 }
 a:hover {
-    color: white;
-    text-decoration: underline;
+  background: #73ABAD;
+  color: #211830;
+}
+a:focus {
+  outline: 0;
+}
+
+.shieldBadge {
+  padding-right: 2px;
 }
