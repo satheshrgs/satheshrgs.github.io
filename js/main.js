@@ -62,12 +62,15 @@ async function getGithubRepos() {
 
     data.forEach((d) => {
       projects.push(
-        `<span class="command">${d.name}</span> <br /><a href="${d.svn_url}"target="_blank">${d.svn_url}`
+        `<a href="${d.svn_url}"target="_blank">${d.name}<br />`
       );
     });
     projects.push("<br />");
     projects.push(
-      "Most of the projects I have developed are for clients which are confidential. But still these are the one's which are available as open source repos in Github"
+      "Most of the projects I have developed are",
+      " for clients which are confidential.",
+      "But still these are the one's which",
+      " are available as open source repos in Github"
     );
 
     return projects;
@@ -80,6 +83,11 @@ async function getGithubRepos() {
 async function commander(cmd) {
   switch (cmd.toLowerCase()) {
     case "help":
+    case "ls":
+    case "dir":
+      if(["ls", "dir"].includes(cmd)) {
+        loopLines(developer, "color2 margin", 80);  
+      }
       loopLines(help, "color2 margin", 80);
       break;
     case "about":

@@ -52,10 +52,15 @@ social = [
   "<br>",
 ];
 
+developer = [
+  "Uh ?... Seems like you are a developer",
+  
+]
+
 projectsLoading = [
   "<br>",
-  "Please wait...Getting my open source repos available on Github",
-  "<br>",
+  "Please wait...",
+  "Getting my open source repos available on Github...",
 ];
 
 projectsError = [
