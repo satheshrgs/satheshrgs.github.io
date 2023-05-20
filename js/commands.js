@@ -52,6 +52,11 @@ social = [
   "<br>",
 ];
 
+developer = [
+  "Uh ?... Seems like you are a developer",
+  
+]
+
 projectsLoading = [
   "<br>",
   "Please wait...",

@@ -83,6 +83,11 @@ async function getGithubRepos() {
 async function commander(cmd) {
   switch (cmd.toLowerCase()) {
     case "help":
+    case "ls":
+    case "dir":
+      if(["ls", "dir"].includes(cmd)) {
+        loopLines(developer, "color2 margin", 80);  
+      }
       loopLines(help, "color2 margin", 80);
       break;
     case "about":
