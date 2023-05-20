@@ -1,22 +1,50 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Sathesh Rgs's CLI CICD Test</title>
-		<meta name="description" content="Terminal look alike website,Sathesh Rgs,Sathesh Rgs's CLI ">
-		<meta name="keywords" content="HTML,CSS,Github,Terminal">
-		<meta name="author" content="Sathesh Rgs">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- favicon,fonts,bootstrap -->
-		<link rel="shortcut icon" type="image/png" href="images/favicon1.png"/>
-		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/style.css">
-		    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">    
-	</head>
-	<body>
-		<div class="container-fluid">
-			<div id="commandArea">
-			</div>
-		</div>
-		<script type="text/javascript" src="js/script.js"></script>
-	</body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sathesh Rgs - Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <link rel="icon" type="image/x-icon" href="images/sathesh.png">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="title" content="Sathesh Rgs - Software Engineer">
+  <meta name="description"
+    content="Sathesh Rgs is a software development engineer. Loves to code and exploring new things.">
+
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://satheshrgs.in/">
+  <meta property="og:title" content="Sathesh Rgs - Software Engineer">
+  <meta property="og:description"
+    content="Sathesh Rgs is a software development engineer. Loves to code and exploring new things.">
+  <meta property="og:image" content="https://satheshrgs.in/images/sathesh.png">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://twitter.com/sathesh_rgs/">
+  <meta property="twitter:title" content="Sathesh Rgs - Software Engineer">
+  <meta property="twitter:description"
+    content="Sathesh Rgs is a software development engineer. Loves to code and exploring new things.">
+  <meta property="twitter:image" content="https://satheshrgs.in/images/sathesh.png">
+
+</head>
+
+<body onclick="$('texter').focus();">
+  <div id="terminal">
+    <a id="before"></a>
+  </div>
+  <div id="command">
+    <textarea type="text" id="texter" onkeyup="typeIt(this, event)" onkeydown="typeIt(this, event); 
+                   moveIt(this.value.length, event)" onkeypress="typeIt(this, event);" autofocus></textarea>
+    <div id="liner">
+      <span id="typer"></span><b class="cursor" id="cursor">█</b>
+    </div>
+  </div>
+  <script src="js/caret.js"></script>
+  <script src="js/commands.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
